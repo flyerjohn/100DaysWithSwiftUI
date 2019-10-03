@@ -25,7 +25,7 @@ struct ContentView: View {
                 HStack(spacing: 10){
                     ForEach(jokes, id:\.setup){ joke in
                         JokeCard(joke: joke)
-                    }.padding([.horizontal])
+                    }.padding()
                    
                 }
             }
