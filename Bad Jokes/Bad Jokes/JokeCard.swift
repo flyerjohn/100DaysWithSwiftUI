@@ -85,6 +85,7 @@ struct JokeCard_Previews: PreviewProvider {
         joke.punchline = "A mathemachicken."
         joke.rating = "Sigh"
         
+        
         return JokeCard(joke: joke)
     }
 }
