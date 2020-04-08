@@ -83,7 +83,7 @@ struct ContentView: View {
                 }
             )
             
-            Text("\(botState.height)").offset(y: -300) //see current height value of bottom card view
+//            Text("\(botState.height)").offset(y: -300) //see current height value of bottom card view
             
             BottomCardView()
                 .offset(x: 0, y: showCard ? 360 : 1000)
