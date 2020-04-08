@@ -12,6 +12,8 @@ struct ContentView: View {
     @State var show = false
     @State var viewState = CGSize.zero
     @State var showCard = false
+    @State var botState = CGSize.zero
+    @State var showFull = false
     
     var body: some View {
         ZStack {
@@ -71,20 +73,48 @@ struct ContentView: View {
                     self.showCard.toggle()
             }
             .gesture(
-                DragGesture().onChanged() { value in
+                DragGesture().onChanged { value in
                     self.viewState = value.translation
                     self.show = true
                 }
-                .onEnded(){ value in
+                .onEnded { value in
                     self.viewState = .zero
                     self.show = false
                 }
             )
             
+            Text("\(botState.height)").offset(y: -300) //see current height value of bottom card view
+            
             BottomCardView()
                 .offset(x: 0, y: showCard ? 360 : 1000)
+                .offset(y: botState.height)
                 //.offset(x: viewState.width, y: viewState.height) //moves the entire modal like view
                 .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8)) //values conforming personal taste.
+            .gesture(
+                DragGesture().onChanged { value in
+                    self.botState = value.translation
+                    if self.showFull {
+                        self.botState.height += -300
+                    }
+                    if self.botState.height < -300 {
+                        self.botState.height = -330
+                    }
+                    
+                }
+                .onEnded { value in
+                    if self.botState.height > 80 {
+                        self.showCard = false
+                    }
+                    if (self.botState.height < -100 && !self.showFull) || (self.botState.height < -250 && self.showFull){
+                        self.botState.height = -300
+                        self.showFull = true
+                    } else {
+                        self.botState = .zero
+                        self.showFull = false
+                    }
+                    
+                }
+            )
         }
 
     }
