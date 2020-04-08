@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var show = false
+    @State var viewState = CGSize.zero
     
     var body: some View {
         ZStack {
@@ -22,6 +23,7 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ? -400 : -40)
+                .offset(x: viewState.width, y: viewState.height)
                 .scaleEffect(0.9)
                 .rotationEffect(.degrees(show ? 0 : 10)) //same ways to declare (Developer Docs)
                 .rotation3DEffect(Angle(degrees: 10), axis: (x: 10.0, y: 0, z: 0))
@@ -33,6 +35,7 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ? -200 : -20)
+                .offset(x: viewState.width, y: viewState.height)
                 .scaleEffect(0.95)
                 .rotationEffect(Angle(degrees: show ? 0 : 5)) //same ways to declare (Developer Docs)
                 .rotation3DEffect(Angle(degrees: 5), axis: (x: 10.0, y: 0, z: 0))
@@ -41,14 +44,27 @@ struct ContentView: View {
             
             
             CardView()
+                .offset(x: viewState.width, y: viewState.height)
                 .blendMode(.hardLight)
+                .animation(.spring(response: 0.3, dampingFraction: 0.6, blendDuration: 0))
                 .onTapGesture {
                     self.show.toggle()
             }
+            .gesture(
+                DragGesture().onChanged() { value in
+                    self.viewState = value.translation
+                    self.show = true
+                }
+                .onEnded(){ value in
+                    self.viewState = .zero
+                    self.show = false
+                }
+            )
             
             BottomCardView()
-                .blur(radius: show ? 0 : 20)
-                .animation(.default)
+                .offset(x: 0, y: show ? 500 : 800)
+                //.offset(x: viewState.width, y: viewState.height) //moves the entire modal like view
+                .animation(.spring(response: 0.56, dampingFraction: 0.85, blendDuration: 0)) //values conforming personal taste.
         }
 
     }
@@ -65,7 +81,7 @@ struct CardView: View {
         VStack {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("UI Design")
+                    Text("SwiftUI")
                         .font(.title)
                         .fontWeight(.semibold)
                         .foregroundColor(Color.white)
@@ -124,7 +140,7 @@ struct BottomCardView: View {
                 .cornerRadius(3)
                 .opacity(0.3)
             
-            Text("This certificate is proof that João Gabriel has achieved the UI Design course with approval from a Design+Code instructor.")
+            Text("This certificate is proof that João Gabriel has achieved the SwiftUI course with approval from a Design+Code instructor.")
                 .multilineTextAlignment(.center)
                 .font(.subheadline)
             Spacer()
@@ -135,6 +151,5 @@ struct BottomCardView: View {
         .background(Color.white)
         .cornerRadius(30)
         .shadow(radius: 20)
-        .offset(x: 0, y: 500)
     }
 }
