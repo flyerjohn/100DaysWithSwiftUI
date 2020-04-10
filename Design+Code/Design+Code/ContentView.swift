@@ -89,7 +89,7 @@ struct ContentView: View {
                 .offset(x: 0, y: showCard ? 360 : 1000)
                 .offset(y: botState.height)
                 //.offset(x: viewState.width, y: viewState.height) //moves the entire modal like view
-                .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8)) //values conforming personal taste.
+                .animation(.spring(response: 0.4, dampingFraction: 0.76, blendDuration: 0)) //values conforming personal taste.
             .gesture(
                 DragGesture().onChanged { value in
                     self.botState = value.translation
@@ -185,9 +185,17 @@ struct BottomCardView: View {
                 .cornerRadius(3)
                 .opacity(0.3)
             
-            Text("This certificate is proof that João Gabriel has achieved the SwiftUI course with approval from a Design+Code instructor.")
-                .multilineTextAlignment(.center)
-                .font(.subheadline)
+            HStack(alignment: .top) {
+                RingView()
+                    .shadow(radius: 14)
+                
+                Text("This certificate is proof that João Gabriel has achieved the SwiftUI course with approval from a Design+Code instructor.")
+                    .multilineTextAlignment(.leading)
+                    .font(.subheadline)
+                    .frame(width: 250)
+                
+            }
+            .padding(.horizontal, 5)
             Spacer()
         }
         .padding(.top, 8)
