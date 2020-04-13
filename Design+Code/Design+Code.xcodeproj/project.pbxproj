@@ -17,6 +17,7 @@
 		D6B24B93243FF0E400F4936C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B24B92243FF0E400F4936C /* Home.swift */; };
 		D6B24B95243FFC9C00F4936C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B24B94243FFC9C00F4936C /* HomeView.swift */; };
 		D6B24B9724400C7F00F4936C /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B24B9624400C7F00F4936C /* RingView.swift */; };
+		D6F1E6D72444E70C00CBD199 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1E6D62444E70C00CBD199 /* UpdateList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D6B24B92243FF0E400F4936C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		D6B24B94243FFC9C00F4936C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D6B24B9624400C7F00F4936C /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		D6F1E6D62444E70C00CBD199 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				D6B24B92243FF0E400F4936C /* Home.swift */,
 				D6B24B94243FFC9C00F4936C /* HomeView.swift */,
 				D6B24B90243FAF1E00F4936C /* MenuView.swift */,
+				D6F1E6D62444E70C00CBD199 /* UpdateList.swift */,
 				D6B24B9624400C7F00F4936C /* RingView.swift */,
 				D618588C243D17C70038C77E /* Assets.xcassets */,
 				D6185891243D17C70038C77E /* LaunchScreen.storyboard */,
@@ -160,6 +163,7 @@
 			files = (
 				D6185887243D17C50038C77E /* AppDelegate.swift in Sources */,
 				D6B24B91243FAF1E00F4936C /* MenuView.swift in Sources */,
+				D6F1E6D72444E70C00CBD199 /* UpdateList.swift in Sources */,
 				D6B24B93243FF0E400F4936C /* Home.swift in Sources */,
 				D6B24B95243FFC9C00F4936C /* HomeView.swift in Sources */,
 				D6B24B9724400C7F00F4936C /* RingView.swift in Sources */,
