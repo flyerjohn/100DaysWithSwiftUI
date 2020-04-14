@@ -85,7 +85,7 @@ struct ContentView: View {
             
 //            Text("\(botState.height)").offset(y: -300) //see current height value of bottom card view
             
-            BottomCardView()
+            BottomCardView(show: $showCard)
                 .offset(x: 0, y: showCard ? 360 : 1000)
                 .offset(y: botState.height)
                 //.offset(x: viewState.width, y: viewState.height) //moves the entire modal like view
@@ -178,24 +178,38 @@ struct TitleView: View {
 }
 
 struct BottomCardView: View {
+    @Binding var show: Bool
+    
     var body: some View {
         VStack(spacing: 20) {
             Rectangle()
                 .frame(width: 40, height: 5)
                 .cornerRadius(3)
                 .opacity(0.3)
+                
+            Text("This certificate is proof that João Gabriel has achieved the SwiftUI course with approval from a Design+Code instructor.")
+                .multilineTextAlignment(.leading)
+                .font(.subheadline)
+                .frame(width: 250)
             
-            HStack(alignment: .top) {
-                RingView()
-                    .shadow(radius: 14)
+            HStack(spacing: 20) {
+                RingView(color1: #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1), color2: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1), width: 88, height: 88, percentage: 69, show: $show)
+                    .animation(Animation.easeInOut.delay(0.38))
                 
-                Text("This certificate is proof that João Gabriel has achieved the SwiftUI course with approval from a Design+Code instructor.")
-                    .multilineTextAlignment(.leading)
-                    .font(.subheadline)
-                    .frame(width: 250)
-                
+                VStack(alignment: .leading, spacing: 8) { //try to transform this into neumorphic
+                    Text("SwiftUI").fontWeight(.bold)
+                    Text("10 of 13 sections completed.\n10 hours spent so far.")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        .lineSpacing(4)
+                }
+                .padding(20)
+                .background(Color.white)
+                .cornerRadius(20)
+//                .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
             }
-            .padding(.horizontal, 5)
+            
             Spacer()
         }
         .padding(.top, 8)
