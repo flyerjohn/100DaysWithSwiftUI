@@ -20,6 +20,7 @@
 		D6F1E6D72444E70C00CBD199 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1E6D62444E70C00CBD199 /* UpdateList.swift */; };
 		D6F1E6D9244538C700CBD199 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1E6D8244538C700CBD199 /* UpdateDetail.swift */; };
 		D6F1E6DB24453E7400CBD199 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1E6DA24453E7400CBD199 /* UpdateStore.swift */; };
+		D6F1E6DF244545B900CBD199 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1E6DE244545B900CBD199 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D6F1E6D62444E70C00CBD199 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		D6F1E6D8244538C700CBD199 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		D6F1E6DA24453E7400CBD199 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
+		D6F1E6DE244545B900CBD199 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				D6F1E6D62444E70C00CBD199 /* UpdateList.swift */,
 				D6F1E6D8244538C700CBD199 /* UpdateDetail.swift */,
 				D6F1E6DA24453E7400CBD199 /* UpdateStore.swift */,
+				D6F1E6DE244545B900CBD199 /* TabBar.swift */,
 				D6B24B9624400C7F00F4936C /* RingView.swift */,
 				D618588C243D17C70038C77E /* Assets.xcassets */,
 				D6185891243D17C70038C77E /* LaunchScreen.storyboard */,
@@ -175,6 +178,7 @@
 				D6B24B95243FFC9C00F4936C /* HomeView.swift in Sources */,
 				D6F1E6DB24453E7400CBD199 /* UpdateStore.swift in Sources */,
 				D6B24B9724400C7F00F4936C /* RingView.swift in Sources */,
+				D6F1E6DF244545B900CBD199 /* TabBar.swift in Sources */,
 				D6185889243D17C50038C77E /* SceneDelegate.swift in Sources */,
 				D618588B243D17C50038C77E /* ContentView.swift in Sources */,
 			);
