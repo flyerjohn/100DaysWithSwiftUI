@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D6167FA92448DE9F006954C9 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6167FA82448DE9F006954C9 /* PostList.swift */; };
 		D6167FAB2448E32E006954C9 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6167FAA2448E32E006954C9 /* DataStore.swift */; };
+		D6167FAE2448E6F0006954C9 /* Contentful in Frameworks */ = {isa = PBXBuildFile; productRef = D6167FAD2448E6F0006954C9 /* Contentful */; };
 		D6185887243D17C50038C77E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6185886243D17C50038C77E /* AppDelegate.swift */; };
 		D6185889243D17C50038C77E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6185888243D17C50038C77E /* SceneDelegate.swift */; };
 		D618588B243D17C50038C77E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D618588A243D17C50038C77E /* ContentView.swift */; };
@@ -59,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6167FAE2448E6F0006954C9 /* Contentful in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +135,9 @@
 			dependencies = (
 			);
 			name = "Design+Code";
+			packageProductDependencies = (
+				D6167FAD2448E6F0006954C9 /* Contentful */,
+			);
 			productName = "Design+Code";
 			productReference = D6185883243D17C50038C77E /* Design+Code.app */;
 			productType = "com.apple.product-type.application";
@@ -161,6 +166,9 @@
 				Base,
 			);
 			mainGroup = D618587A243D17C50038C77E;
+			packageReferences = (
+				D6167FAC2448E6F0006954C9 /* XCRemoteSwiftPackageReference "contentful.swift" */,
+			);
 			productRefGroup = D6185884243D17C50038C77E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -398,6 +406,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6167FAC2448E6F0006954C9 /* XCRemoteSwiftPackageReference "contentful.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/contentful/contentful.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6167FAD2448E6F0006954C9 /* Contentful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6167FAC2448E6F0006954C9 /* XCRemoteSwiftPackageReference "contentful.swift" */;
+			productName = Contentful;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D618587B243D17C50038C77E /* Project object */;
 }
