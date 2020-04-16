@@ -168,8 +168,8 @@ struct CourseView: View {
         }
         .frame(height: show ? screen.height : 280)
         .scaleEffect(1 - self.activeView.height / 1000)
-        .rotation3DEffect(Angle(degrees: Double(self.activeView.height / 10)), axis: (x: 0, y: 10.0, z: 0))
-        .hueRotation(Angle(degrees: Double(self.activeView.height)))
+        .rotation3DEffect(Angle(degrees: Double(self.activeView.height / 10)), axis: (x: -10, y: 0, z: 0))
+//        .hueRotation(Angle(degrees: Double(self.activeView.height)))
         .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
         .gesture(
             show ?
