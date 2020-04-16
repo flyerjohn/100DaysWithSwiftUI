@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D6167FA92448DE9F006954C9 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6167FA82448DE9F006954C9 /* PostList.swift */; };
+		D6167FAB2448E32E006954C9 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6167FAA2448E32E006954C9 /* DataStore.swift */; };
 		D6185887243D17C50038C77E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6185886243D17C50038C77E /* AppDelegate.swift */; };
 		D6185889243D17C50038C77E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6185888243D17C50038C77E /* SceneDelegate.swift */; };
 		D618588B243D17C50038C77E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D618588A243D17C50038C77E /* ContentView.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		D6167FA82448DE9F006954C9 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
+		D6167FAA2448E32E006954C9 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		D6185883243D17C50038C77E /* Design+Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Design+Code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6185886243D17C50038C77E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6185888243D17C50038C77E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				D6F1E6D8244538C700CBD199 /* UpdateDetail.swift */,
 				D6F1E6DA24453E7400CBD199 /* UpdateStore.swift */,
 				D6C127232448DC2500FC3ABB /* Data.swift */,
+				D6167FAA2448E32E006954C9 /* DataStore.swift */,
 				D6167FA82448DE9F006954C9 /* PostList.swift */,
 				D6F1E6DE244545B900CBD199 /* TabBar.swift */,
 				D6B24B9624400C7F00F4936C /* RingView.swift */,
@@ -187,6 +190,7 @@
 			files = (
 				D6185887243D17C50038C77E /* AppDelegate.swift in Sources */,
 				D6C127242448DC2500FC3ABB /* Data.swift in Sources */,
+				D6167FAB2448E32E006954C9 /* DataStore.swift in Sources */,
 				D6B24B91243FAF1E00F4936C /* MenuView.swift in Sources */,
 				D6F1E6D9244538C700CBD199 /* UpdateDetail.swift in Sources */,
 				D6F1E6D72444E70C00CBD199 /* UpdateList.swift in Sources */,
