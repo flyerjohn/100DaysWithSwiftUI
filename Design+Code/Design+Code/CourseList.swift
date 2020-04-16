@@ -18,7 +18,9 @@ struct CourseList: View {
             Color.black.opacity(active ? 0.5 : 0)
                 .animation(.easeInOut)
                 .edgesIgnoringSafeArea(.all)
-            
+                .onAppear {
+                    getArray()
+            }
             ScrollView {
                 VStack(spacing: 30) {
                     Text("Courses").font(.largeTitle).bold()
