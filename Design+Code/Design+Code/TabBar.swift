@@ -21,7 +21,7 @@ struct TabBar: View {
                 Text("Certificates")
             }
         }
-        .edgesIgnoringSafeArea(.top)
+//        .edgesIgnoringSafeArea(.top) // for some reason, after iOS 13.4.1 
     }
 }
 
