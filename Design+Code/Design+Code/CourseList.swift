@@ -9,21 +9,27 @@
 import SwiftUI
 
 struct CourseList: View {
-    @State var show = false
-    @State var show2 = false
+    @State var courses = courseData
     
     var body: some View {
         ScrollView {
             VStack(spacing: 30) {
-                CourseView(show: $show)
-                GeometryReader { geometry in
-                    CourseView(show: self.$show2)
-                        .offset(y: self.show2 ? -geometry.frame(in: .global).minY : 0)
+                Text("Courses").font(.largeTitle).bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 30)
+                    .padding(.top, 30)
+                
+                ForEach(courses.indices, id: \.self) { index in
+                    GeometryReader { geometry in
+                        CourseView(show: self.$courses[index].show, course: self.courses[index])
+                            .offset(y: self.courses[index].show ? -geometry.frame(in: .global).minY : 0)
+                    }
+                    .frame(height: 280)
+                    .frame(maxWidth: self.courses[index].show ? .infinity : screen.width - 60)
                 }
-                .frame(height: show2 ? screen.height : 280)
-                .frame(maxWidth: show2 ? .infinity : screen.width - 60)
             }
             .frame(maxWidth: screen.width)
+            .animation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0))
         }
     }
 }
@@ -36,6 +42,7 @@ struct CourseList_Previews: PreviewProvider {
 
 struct CourseView: View {
     @Binding var show: Bool
+    var course: Course
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -60,15 +67,15 @@ struct CourseView: View {
             VStack {
                 HStack(alignment: .top) {
                     VStack(alignment: .leading) {
-                        Text("SwiftUI Advanced")
+                        Text(course.title)
                             .font(.system(size: 24, weight: .bold))
                             .foregroundColor(.white)
-                        Text("20 Sections")
+                        Text(course.subtitle)
                             .foregroundColor(Color.white.opacity(0.7))
                     }
                     Spacer()
                     ZStack {
-                        Image(uiImage: #imageLiteral(resourceName: "Logo1"))
+                        Image(uiImage: course.logo)
                             .opacity(show ? 0 : 1)
                         
                         VStack {
@@ -85,7 +92,7 @@ struct CourseView: View {
                     
                 }
                 Spacer()
-                Image(uiImage: #imageLiteral(resourceName: "Card2"))
+                Image(uiImage: course.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(maxWidth: .infinity)
@@ -95,15 +102,32 @@ struct CourseView: View {
             .padding(.top, show ? 30 : 0)
                 //        .frame(width: show ? screen.width : screen.width - 60, height: show ? screen.height : 280)
             .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? 460 : 280)
-            .background(Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)))
+            .background(Color(course.color))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-            .shadow(color: Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)).opacity(0.3), radius: 20, x: 0, y: 20)
+            .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
             .onTapGesture {
                 self.show.toggle()
             }
             
         }
-        .animation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0))
+        .frame(height: show ? screen.height : 280)
+        .animation(.spring(response: 0.5, dampingFraction: 0.76, blendDuration: 0))
         .edgesIgnoringSafeArea(.all)
     }
 }
+
+struct Course: Identifiable {
+    var id = UUID()
+    var title: String
+    var subtitle: String
+    var image: UIImage
+    var logo: UIImage
+    var color: UIColor
+    var show: Bool
+}
+
+var courseData = [
+    Course(title: "Combine Framework", subtitle: "12 sections", image: #imageLiteral(resourceName: "Card6"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), show: false),
+    Course(title: "SwiftUI Advanced", subtitle: "20 sections", image: #imageLiteral(resourceName: "Card1"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), show: false),
+    Course(title: "Swift 5.2", subtitle: "30 sections", image: #imageLiteral(resourceName: "Card4"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), show: false),
+]
