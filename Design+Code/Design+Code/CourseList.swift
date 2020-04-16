@@ -150,6 +150,11 @@ struct CourseView: View {
                     self.activeIndex = -1
                 }
             }
+//            if show {
+//                CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex)
+//                    .animation(nil)
+//                    .background(Color.white)
+//            }
             
         }
         .frame(height: show ? screen.height : 280)
