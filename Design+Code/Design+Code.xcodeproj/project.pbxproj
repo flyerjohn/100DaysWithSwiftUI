@@ -32,6 +32,7 @@
 		D6F1E6D9244538C700CBD199 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1E6D8244538C700CBD199 /* UpdateDetail.swift */; };
 		D6F1E6DB24453E7400CBD199 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1E6DA24453E7400CBD199 /* UpdateStore.swift */; };
 		D6F1E6DF244545B900CBD199 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1E6DE244545B900CBD199 /* TabBar.swift */; };
+		D6F9FAFB2465CCA400805E6D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F9FAFA2465CCA400805E6D /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		D6F1E6D8244538C700CBD199 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		D6F1E6DA24453E7400CBD199 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		D6F1E6DE244545B900CBD199 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		D6F9FAFA2465CCA400805E6D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				D618588A243D17C50038C77E /* ContentView.swift */,
 				D6B24B92243FF0E400F4936C /* Home.swift */,
 				D6B24B94243FFC9C00F4936C /* HomeView.swift */,
+				D6F9FAFA2465CCA400805E6D /* LoginView.swift */,
 				D63518AE244693DA00E8A546 /* CourseList.swift */,
 				D6167FAF2448EB5C006954C9 /* CourseStore.swift */,
 				D6CE820F2448CA3F0011AC3C /* CourseDetail.swift */,
@@ -224,6 +227,7 @@
 				D6F1E6DF244545B900CBD199 /* TabBar.swift in Sources */,
 				D6167FA92448DE9F006954C9 /* PostList.swift in Sources */,
 				D6185889243D17C50038C77E /* SceneDelegate.swift in Sources */,
+				D6F9FAFB2465CCA400805E6D /* LoginView.swift in Sources */,
 				D65A286724658E5100A7E2ED /* Buttons.swift in Sources */,
 				D6CE82102448CA3F0011AC3C /* CourseDetail.swift in Sources */,
 				D6B632972449140E00EB1DCD /* BlurView.swift in Sources */,
