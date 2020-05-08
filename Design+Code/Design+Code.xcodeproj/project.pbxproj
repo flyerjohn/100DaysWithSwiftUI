@@ -19,6 +19,7 @@
 		D6185893243D17C70038C77E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6185891243D17C70038C77E /* LaunchScreen.storyboard */; };
 		D63518AD244680D300E8A546 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63518AC244680D300E8A546 /* Modifiers.swift */; };
 		D63518AF244693DA00E8A546 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63518AE244693DA00E8A546 /* CourseList.swift */; };
+		D65A286724658E5100A7E2ED /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65A286624658E5100A7E2ED /* Buttons.swift */; };
 		D6B24B91243FAF1E00F4936C /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B24B90243FAF1E00F4936C /* MenuView.swift */; };
 		D6B24B93243FF0E400F4936C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B24B92243FF0E400F4936C /* Home.swift */; };
 		D6B24B95243FFC9C00F4936C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B24B94243FFC9C00F4936C /* HomeView.swift */; };
@@ -47,6 +48,7 @@
 		D6185894243D17C70038C77E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D63518AC244680D300E8A546 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		D63518AE244693DA00E8A546 /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
+		D65A286624658E5100A7E2ED /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		D6B24B90243FAF1E00F4936C /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		D6B24B92243FF0E400F4936C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		D6B24B94243FFC9C00F4936C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				D6167FA82448DE9F006954C9 /* PostList.swift */,
 				D6F1E6DE244545B900CBD199 /* TabBar.swift */,
 				D6B632962449140E00EB1DCD /* BlurView.swift */,
+				D65A286624658E5100A7E2ED /* Buttons.swift */,
 				D6B24B9624400C7F00F4936C /* RingView.swift */,
 				D618588C243D17C70038C77E /* Assets.xcassets */,
 				D6185891243D17C70038C77E /* LaunchScreen.storyboard */,
@@ -221,6 +224,7 @@
 				D6F1E6DF244545B900CBD199 /* TabBar.swift in Sources */,
 				D6167FA92448DE9F006954C9 /* PostList.swift in Sources */,
 				D6185889243D17C50038C77E /* SceneDelegate.swift in Sources */,
+				D65A286724658E5100A7E2ED /* Buttons.swift in Sources */,
 				D6CE82102448CA3F0011AC3C /* CourseDetail.swift in Sources */,
 				D6B632972449140E00EB1DCD /* BlurView.swift in Sources */,
 				D618588B243D17C50038C77E /* ContentView.swift in Sources */,
