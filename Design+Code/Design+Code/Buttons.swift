@@ -8,6 +8,13 @@
 
 import SwiftUI
 
+func haptic(type: UINotificationFeedbackGenerator.FeedbackType) {
+    UINotificationFeedbackGenerator().notificationOccurred(type)
+}
+
+func impact(type: UIImpactFeedbackGenerator.FeedbackStyle) {
+    UIImpactFeedbackGenerator(style: type).impactOccurred()
+}
 struct Buttons: View {
     
     var body: some View {
@@ -80,12 +87,14 @@ struct RectangleButton: View {
             .gesture(
                 LongPressGesture(minimumDuration: 0.4, maximumDistance: 10).onChanged { value in
                     self.tap = true
+                    impact(type: .heavy)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         self.tap = false
                     }
                 }
                 .onEnded { value in
                     self.press.toggle()
+                    haptic(type: .error)
                 }
         )
     }
@@ -128,12 +137,14 @@ struct CircleButton: View {
             .gesture(
                 LongPressGesture().onChanged { value in
                     self.tap = true
+                    impact(type: .soft)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         self.tap = false
                     }
                 }
                 .onEnded { value in
                     self.press.toggle()
+                    haptic(type: .success)
                 }
             )
     }
@@ -195,6 +206,7 @@ struct PayButton: View {
                 }
                 .onEnded { value in
                     self.press.toggle()
+                    haptic(type: .success)
                 }
             )
     }
