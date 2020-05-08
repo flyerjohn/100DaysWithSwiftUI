@@ -9,9 +9,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var show = false
-    @State var viewState = CGSize.zero
-    @State var isDragging = false
+    @State var email = ""
+    @State var password = ""
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -21,43 +20,106 @@ struct LoginView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .edgesIgnoringSafeArea(.bottom)
             
+            CoverView()
+            
             VStack {
-                GeometryReader { geometry in
-                    Text("Learn design & code.\nFrom scratch.")
-                        .font(.system(size: geometry.size.width/10, weight: .bold))
-                        .foregroundColor(.white)
-                }
-                .frame(maxWidth: 375, maxHeight: 100)
-                .padding(.horizontal, 16)
-                .offset(x: viewState.width/15, y: viewState.height/15)
-                
-                Text("80 hours of courses for SwiftUI, React and design tools.")
-                    .font(.subheadline)
-                    .frame(width: 250)
-                    .offset(x: viewState.width/20, y: viewState.height/20)
-                
-                Spacer()
-            }
-            .multilineTextAlignment(.center)
-            .padding(.top, 100)
-            .frame(height: 477)
-            .frame(maxWidth: .infinity)
-            .background(
-                ZStack {
-                    Image(uiImage: #imageLiteral(resourceName: "Blob"))
-                        .offset(x: -150, y: -200)
-                        .rotationEffect(Angle(degrees: show ? 360+90 : 90))
-                        .animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
-                        .blendMode(.plusDarker)
-                        .onAppear { self.show = true }
+                HStack {
+                    Image(systemName: "person.crop.circle.fill")
+                        .foregroundColor(Color(#colorLiteral(red: 0.6549019608, green: 0.7137254902, blue: 0.862745098, alpha: 1)))
+                        .frame(width: 44, height: 44)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
+                        .padding(.leading)
                     
-                    Image(uiImage: #imageLiteral(resourceName: "Blob"))
-                        .offset(x: -200, y: -250)
-                        .rotationEffect(Angle(degrees: show ? 360 : 0), anchor: .leading)
-                        .animation(Animation.linear(duration: 100).repeatForever(autoreverses: false))
-                        .blendMode(.overlay)
+                    TextField("Your Email".uppercased(), text: $email)
+                        .keyboardType(.emailAddress)
+                        .font(.subheadline)
+                        .padding(.leading)
+                        .frame(height: 44)
                 }
-            )
+                
+                Divider().padding(.leading, 80)
+                
+                HStack {
+                    Image(systemName: "lock.fill")
+                        .foregroundColor(Color(#colorLiteral(red: 0.6549019608, green: 0.7137254902, blue: 0.862745098, alpha: 1)))
+                        .frame(width: 44, height: 44)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
+                        .padding(.leading)
+                    
+                    SecureField("Password".uppercased(), text: $password)
+                        .keyboardType(.default)
+                        .font(.subheadline)
+                        .padding(.leading)
+                        .frame(height: 44)
+                }
+                    
+            }
+            .frame(height: 136)
+            .frame(maxWidth: .infinity)
+            .background(BlurView(style: .systemMaterial))
+            .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .shadow(color: Color.black.opacity(0.15), radius: 20, x: 0, y: 0)
+            .padding(.horizontal)
+            .offset(y: 460)
+        }
+    }
+}
+
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
+    }
+}
+
+struct CoverView: View {
+    @State var show = false
+    @State var viewState = CGSize.zero
+    @State var isDragging = false
+    
+    var body: some View {
+        VStack {
+            GeometryReader { geometry in
+                Text("Learn design & code.\nFrom scratch.")
+                    .font(.system(size: geometry.size.width/10, weight: .bold))
+                    .foregroundColor(.white)
+            }
+            .frame(maxWidth: 375, maxHeight: 100)
+            .padding(.horizontal, 16)
+            .offset(x: viewState.width/15, y: viewState.height/15)
+            
+            Text("80 hours of courses for SwiftUI, React and design tools.")
+                .font(.subheadline)
+                .frame(width: 250)
+                .offset(x: viewState.width/20, y: viewState.height/20)
+            
+            Spacer()
+        }
+        .multilineTextAlignment(.center)
+        .padding(.top, 100)
+        .frame(height: 477)
+        .frame(maxWidth: .infinity)
+        .background(
+            ZStack {
+                Image(uiImage: #imageLiteral(resourceName: "Blob"))
+                    .offset(x: -150, y: -200)
+                    .rotationEffect(Angle(degrees: show ? 360+90 : 90))
+//                    .animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
+                    .animation(nil)
+                    .blendMode(.plusDarker)
+                    .onAppear { self.show = true }
+                
+                Image(uiImage: #imageLiteral(resourceName: "Blob"))
+                    .offset(x: -200, y: -250)
+                    .rotationEffect(Angle(degrees: show ? 360 : 0), anchor: .leading)
+//                    .animation(Animation.linear(duration: 100).repeatForever(autoreverses: false))
+                    .animation(nil)
+                    .blendMode(.overlay)
+            }
+        )
             .background(Image(uiImage: #imageLiteral(resourceName: "Card3")).offset(x: viewState.width/25, y: viewState.height/25), alignment: .bottom)
             .background(Color(#colorLiteral(red: 0.4117647059, green: 0.4705882353, blue: 0.9725490196, alpha: 1)))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
@@ -73,13 +135,6 @@ struct LoginView: View {
                     self.viewState = .zero
                     self.isDragging = false
                 }
-            )
-        }
-    }
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
+        )
     }
 }
