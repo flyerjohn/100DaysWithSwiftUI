@@ -29,7 +29,8 @@ struct ContentView: View {
             )
             
             BackCardView()
-                .frame(width: showCard ? 300 : 340, height: 220)
+                .frame(maxWidth: showCard ? 300 : 340)
+                .frame(height: 220)
                 .background(show ? Color("card3") : Color("card4"))
                 .cornerRadius(20)
                 .shadow(radius: 20)
@@ -44,7 +45,8 @@ struct ContentView: View {
                 .animation(.easeInOut(duration: 0.5))
 
             BackCardView()
-                .frame(width: 340, height: 220)
+                .frame(maxWidth: 340)
+                .frame(height: 220)
                 .background(show ? Color("card4") : Color("card3"))
                 .cornerRadius(20)
                 .shadow(radius: 20)
@@ -60,7 +62,8 @@ struct ContentView: View {
             
             
             CardView()
-                .frame(width: showCard ? 375.0 : 340.0, height: 220.0)
+                .frame(maxWidth: showCard ? 375.0 : 340.0)
+                .frame(height: 220)
                 .background(Color.black)
 //                .cornerRadius(20)
                 .clipShape(RoundedRectangle(cornerRadius: showCard ? 30 : 20, style: .continuous))
@@ -85,36 +88,39 @@ struct ContentView: View {
             
 //            Text("\(botState.height)").offset(y: -300) //see current height value of bottom card view
             
-            BottomCardView(show: $showCard)
-                .offset(x: 0, y: showCard ? 360 : 1000)
-                .offset(y: botState.height)
-                //.offset(x: viewState.width, y: viewState.height) //moves the entire modal like view
-                .animation(.spring(response: 0.4, dampingFraction: 0.76, blendDuration: 0)) //values conforming personal taste.
-            .gesture(
-                DragGesture().onChanged { value in
-                    self.botState = value.translation
-                    if self.showFull {
-                        self.botState.height += -300
+            GeometryReader { bounds in
+                BottomCardView(show: self.$showCard)
+                    .offset(x: 0, y: self.showCard ? bounds.size.height / 2 : bounds.size.height + bounds.safeAreaInsets.top + bounds.safeAreaInsets.bottom)
+                    .offset(y: self.botState.height)
+                    //.offset(x: viewState.width, y: viewState.height) //moves the entire modal like view
+                    .animation(.spring(response: 0.4, dampingFraction: 0.76, blendDuration: 0)) //values conforming personal taste.
+                .gesture(
+                    DragGesture().onChanged { value in
+                        self.botState = value.translation
+                        if self.showFull {
+                            self.botState.height += -300
+                        }
+                        if self.botState.height < -300 {
+                            self.botState.height = -330
+                        }
+                        
                     }
-                    if self.botState.height < -300 {
-                        self.botState.height = -330
+                    .onEnded { value in
+                        if self.botState.height > 80 {
+                            self.showCard = false
+                        }
+                        if (self.botState.height < -100 && !self.showFull) || (self.botState.height < -250 && self.showFull){
+                            self.botState.height = -300
+                            self.showFull = true
+                        } else {
+                            self.botState = .zero
+                            self.showFull = false
+                        }
+                        
                     }
-                    
-                }
-                .onEnded { value in
-                    if self.botState.height > 80 {
-                        self.showCard = false
-                    }
-                    if (self.botState.height < -100 && !self.showFull) || (self.botState.height < -250 && self.showFull){
-                        self.botState.height = -300
-                        self.showFull = true
-                    } else {
-                        self.botState = .zero
-                        self.showFull = false
-                    }
-                    
-                }
-            )
+                )
+            }
+//            .edgesIgnoringSafeArea(.all)
         }
 
     }
@@ -123,6 +129,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewLayout(.fixed(width: 320, height: 667))
     }
 }
 
@@ -172,6 +179,9 @@ struct TitleView: View {
             }
             .padding()
             Image("Background1")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(maxWidth: 375)
             Spacer()
         }
     }
@@ -214,9 +224,10 @@ struct BottomCardView: View {
         }
         .padding(.top, 8)
         .padding(.horizontal, 20)
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: 712)
         .background(BlurView(style: .systemMaterial))
         .cornerRadius(30)
         .shadow(radius: 20)
+        .frame(maxWidth: .infinity)
     }
 }
