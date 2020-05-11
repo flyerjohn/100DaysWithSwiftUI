@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D1C6B9495EEF54F8DA6F3F6 /* Pods_Design_Code.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9C7FCBF256A382709ADBA2 /* Pods_Design_Code.framework */; };
 		D6167FA92448DE9F006954C9 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6167FA82448DE9F006954C9 /* PostList.swift */; };
 		D6167FAB2448E32E006954C9 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6167FAA2448E32E006954C9 /* DataStore.swift */; };
-		D6167FAE2448E6F0006954C9 /* Contentful in Frameworks */ = {isa = PBXBuildFile; productRef = D6167FAD2448E6F0006954C9 /* Contentful */; };
+		D6167FAE2448E6F0006954C9 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D6167FAD2448E6F0006954C9 /* SwiftPackageProductDependency */; };
 		D6167FB02448EB5C006954C9 /* CourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6167FAF2448EB5C006954C9 /* CourseStore.swift */; };
 		D6185887243D17C50038C77E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6185886243D17C50038C77E /* AppDelegate.swift */; };
 		D6185889243D17C50038C77E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6185888243D17C50038C77E /* SceneDelegate.swift */; };
@@ -24,13 +25,14 @@
 		D6B24B93243FF0E400F4936C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B24B92243FF0E400F4936C /* Home.swift */; };
 		D6B24B95243FFC9C00F4936C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B24B94243FFC9C00F4936C /* HomeView.swift */; };
 		D6B24B9724400C7F00F4936C /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B24B9624400C7F00F4936C /* RingView.swift */; };
-		D6B6329524490F2500EB1DCD /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D6B6329424490F2500EB1DCD /* SDWebImageSwiftUI */; };
+		D6B6329524490F2500EB1DCD /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D6B6329424490F2500EB1DCD /* SwiftPackageProductDependency */; };
 		D6B632972449140E00EB1DCD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B632962449140E00EB1DCD /* BlurView.swift */; };
 		D6C127242448DC2500FC3ABB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C127232448DC2500FC3ABB /* Data.swift */; };
 		D6CE82102448CA3F0011AC3C /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE820F2448CA3F0011AC3C /* CourseDetail.swift */; };
+		D6D3F43F2469978D00B41158 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6D3F43E2469978D00B41158 /* GoogleService-Info.plist */; };
 		D6EE6D5D2468964E0081DB87 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = D6EE6D5B2468964E0081DB87 /* loading.json */; };
 		D6EE6D5E2468964E0081DB87 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = D6EE6D5C2468964E0081DB87 /* success.json */; };
-		D6EE6D61246896960081DB87 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D6EE6D60246896960081DB87 /* Lottie */; };
+		D6EE6D61246896960081DB87 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D6EE6D60246896960081DB87 /* SwiftPackageProductDependency */; };
 		D6EE6D63246897150081DB87 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EE6D62246897150081DB87 /* LottieView.swift */; };
 		D6EE6D6524689AB40081DB87 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EE6D6424689AB40081DB87 /* LoadingView.swift */; };
 		D6EE6D692468A1470081DB87 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EE6D682468A1470081DB87 /* SuccessView.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		032606655CA1679F5FB9F365 /* Pods-Design+Code.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Design+Code.release.xcconfig"; path = "Target Support Files/Pods-Design+Code/Pods-Design+Code.release.xcconfig"; sourceTree = "<group>"; };
+		59E6F61EBA21D98C96312063 /* Pods-Design+Code.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Design+Code.debug.xcconfig"; path = "Target Support Files/Pods-Design+Code/Pods-Design+Code.debug.xcconfig"; sourceTree = "<group>"; };
 		D6167FA82448DE9F006954C9 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		D6167FAA2448E32E006954C9 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		D6167FAF2448EB5C006954C9 /* CourseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStore.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 		D6B632962449140E00EB1DCD /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		D6C127232448DC2500FC3ABB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D6CE820F2448CA3F0011AC3C /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
+		D6D3F43E2469978D00B41158 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D6EE6D5B2468964E0081DB87 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		D6EE6D5C2468964E0081DB87 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		D6EE6D62246897150081DB87 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -73,6 +78,7 @@
 		D6F1E6DA24453E7400CBD199 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		D6F1E6DE244545B900CBD199 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		D6F9FAFA2465CCA400805E6D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		ED9C7FCBF256A382709ADBA2 /* Pods_Design_Code.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Design_Code.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,20 +86,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6B6329524490F2500EB1DCD /* SDWebImageSwiftUI in Frameworks */,
-				D6167FAE2448E6F0006954C9 /* Contentful in Frameworks */,
-				D6EE6D61246896960081DB87 /* Lottie in Frameworks */,
+				D6B6329524490F2500EB1DCD /* BuildFile in Frameworks */,
+				D6167FAE2448E6F0006954C9 /* BuildFile in Frameworks */,
+				D6EE6D61246896960081DB87 /* BuildFile in Frameworks */,
+				7D1C6B9495EEF54F8DA6F3F6 /* Pods_Design_Code.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C756749BA73633019927E48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59E6F61EBA21D98C96312063 /* Pods-Design+Code.debug.xcconfig */,
+				032606655CA1679F5FB9F365 /* Pods-Design+Code.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D60F5D5992A7C3BBC2301759 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED9C7FCBF256A382709ADBA2 /* Pods_Design_Code.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D618587A243D17C50038C77E = {
 			isa = PBXGroup;
 			children = (
 				D6185885243D17C50038C77E /* Design+Code */,
 				D6185884243D17C50038C77E /* Products */,
+				9C756749BA73633019927E48 /* Pods */,
+				D60F5D5992A7C3BBC2301759 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +161,7 @@
 				D6B24B9624400C7F00F4936C /* RingView.swift */,
 				D618588C243D17C70038C77E /* Assets.xcassets */,
 				D6EE6D5A2468964E0081DB87 /* Lottie */,
+				D6D3F43E2469978D00B41158 /* GoogleService-Info.plist */,
 				D6185891243D17C70038C77E /* LaunchScreen.storyboard */,
 				D6185894243D17C70038C77E /* Info.plist */,
 				D618588E243D17C70038C77E /* Preview Content */,
@@ -165,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6185897243D17C70038C77E /* Build configuration list for PBXNativeTarget "Design+Code" */;
 			buildPhases = (
+				5710194735B4CF29B4F66E94 /* [CP] Check Pods Manifest.lock */,
 				D618587F243D17C50038C77E /* Sources */,
 				D6185880243D17C50038C77E /* Frameworks */,
 				D6185881243D17C50038C77E /* Resources */,
+				2F6CDCF65BF657B877011692 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,9 +205,9 @@
 			);
 			name = "Design+Code";
 			packageProductDependencies = (
-				D6167FAD2448E6F0006954C9 /* Contentful */,
-				D6B6329424490F2500EB1DCD /* SDWebImageSwiftUI */,
-				D6EE6D60246896960081DB87 /* Lottie */,
+				D6167FAD2448E6F0006954C9 /* SwiftPackageProductDependency */,
+				D6B6329424490F2500EB1DCD /* SwiftPackageProductDependency */,
+				D6EE6D60246896960081DB87 /* SwiftPackageProductDependency */,
 			);
 			productName = "Design+Code";
 			productReference = D6185883243D17C50038C77E /* Design+Code.app */;
@@ -208,9 +238,9 @@
 			);
 			mainGroup = D618587A243D17C50038C77E;
 			packageReferences = (
-				D6167FAC2448E6F0006954C9 /* XCRemoteSwiftPackageReference "contentful.swift" */,
-				D6B6329324490F2500EB1DCD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-				D6EE6D5F246896960081DB87 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				D6167FAC2448E6F0006954C9 /* RemoteSwiftPackageReference */,
+				D6B6329324490F2500EB1DCD /* RemoteSwiftPackageReference */,
+				D6EE6D5F246896960081DB87 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = D6185884243D17C50038C77E /* Products */;
 			projectDirPath = "";
@@ -231,10 +261,53 @@
 				D6185890243D17C70038C77E /* Preview Assets.xcassets in Resources */,
 				D6EE6D5D2468964E0081DB87 /* loading.json in Resources */,
 				D618588D243D17C70038C77E /* Assets.xcassets in Resources */,
+				D6D3F43F2469978D00B41158 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F6CDCF65BF657B877011692 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Design+Code/Pods-Design+Code-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Design+Code/Pods-Design+Code-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Design+Code/Pods-Design+Code-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5710194735B4CF29B4F66E94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Design+Code-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D618587F243D17C50038C77E /* Sources */ = {
@@ -398,6 +471,7 @@
 		};
 		D6185898243D17C70038C77E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59E6F61EBA21D98C96312063 /* Pods-Design+Code.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -419,6 +493,7 @@
 		};
 		D6185899243D17C70038C77E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 032606655CA1679F5FB9F365 /* Pods-Design+Code.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,7 +537,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D6167FAC2448E6F0006954C9 /* XCRemoteSwiftPackageReference "contentful.swift" */ = {
+		D6167FAC2448E6F0006954C9 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/contentful/contentful.swift.git";
 			requirement = {
@@ -470,7 +545,7 @@
 				minimumVersion = 5.0.9;
 			};
 		};
-		D6B6329324490F2500EB1DCD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+		D6B6329324490F2500EB1DCD /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
 			requirement = {
@@ -478,7 +553,7 @@
 				minimumVersion = 1.3.3;
 			};
 		};
-		D6EE6D5F246896960081DB87 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		D6EE6D5F246896960081DB87 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -489,19 +564,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D6167FAD2448E6F0006954C9 /* Contentful */ = {
+		D6167FAD2448E6F0006954C9 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D6167FAC2448E6F0006954C9 /* XCRemoteSwiftPackageReference "contentful.swift" */;
+			package = D6167FAC2448E6F0006954C9 /* RemoteSwiftPackageReference */;
 			productName = Contentful;
 		};
-		D6B6329424490F2500EB1DCD /* SDWebImageSwiftUI */ = {
+		D6B6329424490F2500EB1DCD /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D6B6329324490F2500EB1DCD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			package = D6B6329324490F2500EB1DCD /* RemoteSwiftPackageReference */;
 			productName = SDWebImageSwiftUI;
 		};
-		D6EE6D60246896960081DB87 /* Lottie */ = {
+		D6EE6D60246896960081DB87 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D6EE6D5F246896960081DB87 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = D6EE6D5F246896960081DB87 /* RemoteSwiftPackageReference */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
