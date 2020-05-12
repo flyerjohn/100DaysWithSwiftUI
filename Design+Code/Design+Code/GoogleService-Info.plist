@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>134717726543-8o8uvsve41g8sdr0fuehh8rrp4b893pv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.134717726543-8o8uvsve41g8sdr0fuehh8rrp4b893pv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA_NDKwQYl8bas6Iu_3vwPIOWAM2a0yQzI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>134717726543</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.joaomedeiros.Design-Code</string>
+	<key>PROJECT_ID</key>
+	<string>designcode-baade</string>
+	<key>STORAGE_BUCKET</key>
+	<string>designcode-baade.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:134717726543:ios:93169255809914e55cef3a</string>
+	<key>DATABASE_URL</key>
+	<string>https://designcode-baade.firebaseio.com</string>
+</dict>
+</plist>
