@@ -59,6 +59,7 @@ struct UpdateList: View {
                 Image(systemName: "plus")
             }, trailing: EditButton())
         }
+    .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
