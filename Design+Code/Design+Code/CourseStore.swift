@@ -33,6 +33,7 @@ class CourseStore: ObservableObject {
     
     init() {
         let colors = [#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1), #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1), #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)]
+        var index = 0
         
         getArray(id: "course") { (items) in
             items.forEach { (item) in
@@ -40,8 +41,9 @@ class CourseStore: ObservableObject {
                                            subtitle: item.fields["subtitle"] as! String,
                                            image: item.fields.linkedAsset(at: "image")?.url ?? URL(string: "")!,
                                            logo: #imageLiteral(resourceName: "Logo1"),
-                                           color: colors.randomElement()!,
+                                           color: colors[index],
                                            show: false))
+                index += 1
             }
         }
     }
